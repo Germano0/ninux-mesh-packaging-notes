@@ -5,17 +5,18 @@ Version:        0.1.2
 Release:        1%{?dist}
 Summary:        Reusable django app for collecting and visualizing network topology
 
-Group:          Development/Libraries
+Group:          Development/Libraries # would you change it?
 License:        MIT
-URL:            https://pypi.python.org/pypi/django-netjsongraph
+URL:            https://github.com/interop-dev/django-netjsongraph
 Source0:        https://pypi.python.org/packages/source/d/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 
 BuildArch:      noarch
 
-BuildRequires:  python3-setuptools
-BuildRequires:  python3-devel
-BuildRequires:  ncurses-devel
-Requires:       ncurses
+Requires:       python-django >= 1.9
+Requires:       python-django < 1.10
+Requires:		python-django-rest-framework >= 3.3
+Requires:		python-django-rest-framework < 3.4
+Requires:		python-six
 
 %description
 django-netjsongraph is a network topology collector and
