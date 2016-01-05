@@ -12,6 +12,7 @@ Source0:        https://pypi.python.org/packages/source/d/%{pypi_name}/%{pypi_na
 
 BuildArch:      noarch
 
+Requires:		python
 Requires:       python-django >= 1.9
 Requires:       python-django < 1.10
 Requires:		python-django-rest-framework >= 3.3
