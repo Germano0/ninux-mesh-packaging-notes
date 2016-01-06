@@ -5,7 +5,6 @@ Version:        0.9.2
 Release:        1%{?dist}
 Summary:        libcnml is a CNML parser library for Python.
 
-Group:          Development/Libraries # would you change it?
 License:        MIT
 URL:            https://github.com/PabloCastellano/libcnml
 Source0:        https://pypi.python.org/packages/source/l/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
