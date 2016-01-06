@@ -1,7 +1,7 @@
 %global pypi_name netdiff
 
 Name:           python-%{pypi_name}
-Version:        0.1.2
+Version:        0.4.7
 Release:        1%{?dist}
 Summary:        Python library for parsing network topology data (eg: dynamic routing protocols, NetJSON, CNML) and detect changes.
 
@@ -14,7 +14,6 @@ Source0:        https://pypi.python.org/packages/source/n/%{pypi_name}/%{pypi_na
 BuildArch:      noarch
 
 # EDIT REQUIRES
-Requires:		python
 Requires:       python-django >= 1.9
 Requires:       python-django < 1.10
 Requires:		python-django-rest-framework >= 3.3
