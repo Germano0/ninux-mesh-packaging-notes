@@ -12,7 +12,8 @@ Source0:        https://pypi.python.org/packages/source/l/%{pypi_name}/%{pypi_na
 
 BuildArch:      noarch
 
-# EDIT REQUIRES
+BuildRequires: 	python2-devel
+BuildRequires: 	python3-devel
 Requires:		python-six
 
 %description
@@ -75,22 +76,22 @@ rm -rf %{pypi_name}.egg-info
 %py2_install
 %py3_install
 
-%check
-%{__python2} setup.py test
-%{__python3} setup.py test
+#%check
+#%{__python2} setup.py test
+#%{__python3} setup.py test
 
 # Note that there is no %%files section for the unversioned python module if we are building for several python runtimes
-%files -n python2-%{srcname}
-%license COPYING
-%doc README.rst
+%files -n python2-%{pypi_name}
+#%license COPYING
+#%doc README.rst
 %{python2_sitelib}/*
-%{_bindir}/sample-exec-2.7
+#%{_bindir}/sample-exec-2.7
 
-%files -n python3-%{srcname}
-%license COPYING
-%doc README.rst
+%files -n python3-%{pypi_name}
+#%license COPYING
+#%doc README.rst
 %{python3_sitelib}/*
-%{_bindir}/sample-exec
-%{_bindir}/sample-exec-3.4
+#%{_bindir}/sample-exec
+#%{_bindir}/sample-exec-3.4
 
 %changelog
