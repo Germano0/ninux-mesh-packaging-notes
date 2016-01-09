@@ -46,13 +46,13 @@ rm -rf %{pypi_name}.egg-info
 %{__python3} setup.py test
 
 # Note that there is no %%files section for the unversioned python module if we are building for several python runtimes
-%files -n python2-%{srcname}
+%files -n python2-%{pypi_name}
 %license COPYING
 %doc README.rst
 %{python2_sitelib}/*
 %{_bindir}/sample-exec-2.7
 
-%files -n python3-%{srcname}
+%files -n python3-%{pypi_name}
 %license COPYING
 %doc README.rst
 %{python3_sitelib}/*
