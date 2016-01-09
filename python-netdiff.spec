@@ -18,6 +18,7 @@ Requires:       python-django < 1.10
 Requires:		python-django-rest-framework >= 3.3
 Requires:		python-django-rest-framework < 3.4
 Requires:		python-six
+Requires:		python-nose
 
 %description
 Netdiff is a simple Python library that provides utilities for
