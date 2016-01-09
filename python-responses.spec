@@ -6,7 +6,7 @@ Release:        1%{?dist}
 Summary:        A utility library for mocking out the requests Python library.
 License:        Apache License, Version 2.0
 URL:            https://pypi.python.org/pypi/responses/0.5.0
-Source0:        https://pypi.python.org/packages/source/r/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://github.com/getsentry/responses/archive/%{version}.tar.gz
 
 
 BuildArch:      noarch
