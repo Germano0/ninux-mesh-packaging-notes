@@ -76,6 +76,10 @@ rm -rf %{pypi_name}.egg-info
 %py2_install
 %py3_install
 
+%check
+%{__python2} setup.py test
+%{__python3} setup.py test
+
 rm -f %{buildroot}%{_prefix}/LICENSE.txt
 
 # Note that there is no %%files section for the unversioned python module if we are building for several python runtimes
@@ -83,12 +87,13 @@ rm -f %{buildroot}%{_prefix}/LICENSE.txt
 %license LICENSE.txt
 #%doc README.rst
 %{python2_sitelib}/*
-
+%{_bindir}/sample-exec-2.7
 
 %files -n python3-%{pypi_name}
 %license LICENSE.txt
 #%doc README.rst
 %{python3_sitelib}/*
-
+%{_bindir}/sample-exec
+%{_bindir}/sample-exec-3.4
 
 %changelog
