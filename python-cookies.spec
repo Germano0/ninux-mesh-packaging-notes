@@ -57,21 +57,24 @@ Python’s Cookie.py (aka http.cookies).
 %py3_install
 
 %check
-#rm -rf test_cookies.py
-#%{__python2} setup.py test
-%{__python2} /usr/bin/py.test
-#%{__python3} setup.py test
-{__python3} /usr/bin/py.test
+# removing test_cookies.py to avoid import file mismatch error
+# imported module 'test_cookies' has this __file__ attribute:
+#   /home/makerpm/rpmbuild/BUILD/cookies-2.2.1/test_cookies.py
+# which is not the same as the test file we want to collect:
+#   /home/makerpm/rpmbuild/BUILD/cookies-2.2.1/build/lib/test_cookies.py
+rm test_cookies.py
+%{__python2} setup.py test
+%{__python3} setup.py test
 
 # Note that there is no %%files section for the unversioned python module if we are building for several python runtimes
 %files -n python2-%{pypi_name}
-%license LICENSE
-%doc README.rst
+#%license LICENSE
+%doc README
 %{python2_sitelib}/*
 
 %files -n python3-%{pypi_name}
-%license LICENSE
-%doc README.rst
+#%license LICENSE
+%doc README
 %{python3_sitelib}/*
 
 %changelog
