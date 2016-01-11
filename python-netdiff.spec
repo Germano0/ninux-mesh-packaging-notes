@@ -60,13 +60,10 @@ rm -rf %{pypi_name}.egg-info
 %license COPYING
 %doc README.rst
 %{python2_sitelib}/*
-%{_bindir}/sample-exec-2.7
 
 %files -n python3-%{pypi_name}
 %license COPYING
 %doc README.rst
 %{python3_sitelib}/*
-%{_bindir}/sample-exec
-%{_bindir}/sample-exec-3.4
 
 %changelog
