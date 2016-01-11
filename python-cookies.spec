@@ -46,7 +46,6 @@ Python’s Cookie.py (aka http.cookies).
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
-rm -rf test_cookies.py
 
 %build
 %py2_build
