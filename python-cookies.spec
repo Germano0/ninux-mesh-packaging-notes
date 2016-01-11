@@ -14,6 +14,7 @@ BuildArch:      noarch
 Requires:       python
 Requires:       python3
 Requires:       pytest
+Requires:       python3-pytest
 
 %description
 cookies.py is a Python module for working with HTTP cookies:
