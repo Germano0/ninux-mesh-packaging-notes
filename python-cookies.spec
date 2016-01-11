@@ -57,6 +57,7 @@ rm -rf test_cookies.py
 %py3_install
 
 %check
+rm -rf test_cookies.py
 %{__python2} setup.py test
 %{__python3} setup.py test
 
