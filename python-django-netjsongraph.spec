@@ -44,7 +44,7 @@ BATMAN-advanced, BMX and NetJSON NetworkGraph.
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
-rm -rf %{pypi_name}.egg-info
+# remove rm -rf %{pypi_name}.egg-info
 
 %build
 %py2_build

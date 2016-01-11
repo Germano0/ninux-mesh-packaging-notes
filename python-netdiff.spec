@@ -41,7 +41,7 @@ routing protocols and detecting changes in these topologies.
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
-rm -rf %{pypi_name}.egg-info
+# rm -rf %{pypi_name}.egg-info
 
 %build
 %py2_build

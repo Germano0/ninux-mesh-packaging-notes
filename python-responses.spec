@@ -35,7 +35,7 @@ A utility library for mocking out the requests Python library.
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
-rm -rf %{pypi_name}.egg-info
+# remove rm -rf %{pypi_name}.egg-info
 
 %build
 %py2_build
