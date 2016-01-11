@@ -11,10 +11,8 @@ Source0:        https://pypi.python.org/packages/source/d/%{pypi_name}/%{pypi_na
 
 BuildArch:      noarch
 
-Requires:       python
-Requires:       python-devel
-Requires:       python3
-Requires:       python3-devel
+BuildRequires:  python-devel
+BuildRequires:  python3-devel
 Requires:       python-django >= 1.9
 Requires:       python-django < 1.10
 Requires:		python-django-rest-framework >= 3.3
