@@ -56,9 +56,11 @@ Python’s Cookie.py (aka http.cookies).
 %py3_install
 
 %check
-rm -rf test_cookies.py
-%{__python2} setup.py test
-%{__python3} setup.py test
+#rm -rf test_cookies.py
+#%{__python2} setup.py test
+%{__python2} /usr/bin/py.test
+#%{__python3} setup.py test
+{__python3} /usr/bin/py.test
 
 # Note that there is no %%files section for the unversioned python module if we are building for several python runtimes
 %files -n python2-%{pypi_name}
