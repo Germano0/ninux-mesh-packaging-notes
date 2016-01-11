@@ -14,9 +14,13 @@ BuildArch:      noarch
 
 # EDIT REQUIRES
 Requires:       python-networkx
+Requires:       python-nose
+Requires:       python3-nose
 Requires:       python-requests
 Requires:       python-six
 Requires:       python-libcnml
+Requires:       python-mock
+Requires:       python3-mock
 
 %description
 Netdiff is a simple Python library that provides utilities for
@@ -33,7 +37,6 @@ routing protocols and detecting changes in these topologies.
 
 %package -n python3-%{pypi_name}
 Summary:        Python library for parsing network topology data (eg: dynamic routing protocols, NetJSON, CNML) and detect changes.
-
 %description -n python3-%{pypi_name}
 Netdiff is a simple Python library that provides utilities for
 parsing network topology data of open source dynamic
@@ -57,12 +60,12 @@ routing protocols and detecting changes in these topologies.
 
 # Note that there is no %%files section for the unversioned python module if we are building for several python runtimes
 %files -n python2-%{pypi_name}
-%license COPYING
+%license LICENSE
 %doc README.rst
 %{python2_sitelib}/*
 
 %files -n python3-%{pypi_name}
-%license COPYING
+%license LICENSE
 %doc README.rst
 %{python3_sitelib}/*
 
