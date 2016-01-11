@@ -13,12 +13,10 @@ Source0:        https://pypi.python.org/packages/source/n/%{pypi_name}/%{pypi_na
 BuildArch:      noarch
 
 # EDIT REQUIRES
-Requires:       python-django >= 1.9
-Requires:       python-django < 1.10
-Requires:		python-django-rest-framework >= 3.3
-Requires:		python-django-rest-framework < 3.4
-Requires:		python-six
-Requires:		python-nose
+Requires:       python-networkx
+Requires:       python-requests
+Requires:       python-six
+Requires:       python-libcnml
 
 %description
 Netdiff is a simple Python library that provides utilities for
@@ -26,7 +24,7 @@ parsing network topology data of open source dynamic
 routing protocols and detecting changes in these topologies.
 
 %package -n python2-%{pypi_name}
-Summary:        Reusable django app for collecting and visualizing network topology
+Summary:        Python library for parsing network topology data (eg: dynamic routing protocols, NetJSON, CNML) and detect changes.
 
 %description -n python2-%{pypi_name}
 Netdiff is a simple Python library that provides utilities for
@@ -34,7 +32,7 @@ parsing network topology data of open source dynamic
 routing protocols and detecting changes in these topologies.
 
 %package -n python3-%{pypi_name}
-Summary:        Reusable django app for collecting and visualizing network topology
+Summary:        Python library for parsing network topology data (eg: dynamic routing protocols, NetJSON, CNML) and detect changes.
 
 %description -n python3-%{pypi_name}
 Netdiff is a simple Python library that provides utilities for
