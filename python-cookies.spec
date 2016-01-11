@@ -13,8 +13,6 @@ BuildArch:      noarch
 
 BuildRequires:  python-devel
 BuildRequires:  python3-devel
-Requires:       pytest
-Requires:       python3-pytest
 
 %description
 cookies.py is a Python module for working with HTTP cookies:
@@ -25,6 +23,7 @@ Python’s Cookie.py (aka http.cookies).
 
 %package -n python2-%{pypi_name}
 Summary:        Friendlier RFC 6265-compliant cookie parser/renderer
+Requires:       pytest
 
 %description -n python2-%{pypi_name}
 cookies.py is a Python module for working with HTTP cookies:
@@ -36,6 +35,7 @@ Python’s Cookie.py (aka http.cookies).
 
 %package -n python3-%{pypi_name}
 Summary:        Friendlier RFC 6265-compliant cookie parser/renderer
+Requires:       python3-pytest
 
 %description -n python3-%{pypi_name}
 cookies.py is a Python module for working with HTTP cookies:

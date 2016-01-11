@@ -14,7 +14,6 @@ BuildArch:      noarch
 
 BuildRequires:  python-devel
 BuildRequires:  python3-devel
-Requires:		python-six
 
 %description
 Community Network Mark Up Language (CNML) is a project that aims to define
@@ -32,6 +31,7 @@ reducing dependence from it and its internal tables of the database.
 
 %package -n python2-%{pypi_name}
 Summary:        libcnml is a CNML parser library for Python.
+Requires:		python-six
 
 %description -n python2-%{pypi_name}
 Community Network Mark Up Language (CNML) is a project that aims to define
@@ -49,6 +49,7 @@ reducing dependence from it and its internal tables of the database.
 
 %package -n python3-%{pypi_name}
 Summary:        libcnml is a CNML parser library for Python.
+Requires:		python3-six
 
 %description -n python3-%{pypi_name}
 Community Network Mark Up Language (CNML) is a project that aims to define

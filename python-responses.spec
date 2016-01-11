@@ -13,24 +13,24 @@ BuildArch:      noarch
 
 BuildRequires:  python-devel
 BuildRequires:  python3-devel
-Requires:       python-requests
-Requires:       python3-requests
-Requires:       python2-cookies
-Requires:       python3-cookies
-Requires:       python-six
-
 
 %description
 A utility library for mocking out the requests Python library.
 
 %package -n python2-%{pypi_name}
 Summary:        Reusable django app for collecting and visualizing network topology
+Requires:       python-requests
+Requires:       python2-cookies
+Requires:       python-six
 
 %description -n python2-%{pypi_name}
 A utility library for mocking out the requests Python library.
 
 %package -n python3-%{pypi_name}
 Summary:        Reusable django app for collecting and visualizing network topology
+Requires:       python3-requests
+Requires:       python3-cookies
+Requires:       python3-six
 
 %description -n python3-%{pypi_name}
 A utility library for mocking out the requests Python library.

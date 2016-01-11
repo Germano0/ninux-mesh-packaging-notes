@@ -13,12 +13,6 @@ BuildArch:      noarch
 
 BuildRequires:  python-devel
 BuildRequires:  python3-devel
-Requires:       python-django >= 1.9
-Requires:       python-django < 1.10
-Requires:		python-django-rest-framework >= 3.3
-Requires:		python-django-rest-framework < 3.4
-Requires:		python-netdiff
-Requires:		python-six
 
 %description
 django-netjsongraph is a network topology collector and
@@ -28,6 +22,12 @@ BATMAN-advanced, BMX and NetJSON NetworkGraph.
 
 %package -n python2-%{pypi_name}
 Summary:        Reusable django app for collecting and visualizing network topology
+Requires:       python-django >= 1.9
+Requires:       python-django < 1.10
+Requires:		python-django-rest-framework >= 3.3
+Requires:		python-django-rest-framework < 3.4
+Requires:		python2-netdiff
+Requires:		python-six
 
 %description -n python2-%{pypi_name}
 django-netjsongraph is a network topology collector and
@@ -37,6 +37,12 @@ BATMAN-advanced, BMX and NetJSON NetworkGraph.
 
 %package -n python3-%{pypi_name}
 Summary:        Reusable django app for collecting and visualizing network topology
+Requires:       python3-django >= 1.9
+Requires:       python3-django < 1.10
+Requires:		python3-django-rest-framework >= 3.3
+Requires:		python3-django-rest-framework < 3.4
+Requires:		python3-netdiff
+Requires:		python3-six
 
 %description -n python3-%{pypi_name}
 django-netjsongraph is a network topology collector and
