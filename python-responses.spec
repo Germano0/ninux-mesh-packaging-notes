@@ -11,6 +11,10 @@ Source0:        https://github.com/getsentry/responses/archive/%{pypi_name}-%{ve
 
 BuildArch:      noarch
 
+Requires:       python
+Requires:       python-devel
+Requires:       python3
+Requires:       python3-devel
 Requires:       python-requests
 Requires:       python3-requests
 Requires:       python2-cookies

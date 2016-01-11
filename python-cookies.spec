@@ -12,7 +12,9 @@ Source0:        https://pypi.python.org/packages/source/c/%{pypi_name}/%{pypi_na
 BuildArch:      noarch
 
 Requires:       python
+Requires:       python-devel
 Requires:       python3
+Requires:       python3-devel
 Requires:       pytest
 Requires:       python3-pytest
 

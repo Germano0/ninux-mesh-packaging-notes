@@ -12,6 +12,10 @@ Source0:        https://pypi.python.org/packages/source/n/%{pypi_name}/%{pypi_na
 
 BuildArch:      noarch
 
+Requires:       python
+Requires:       python-devel
+Requires:       python3
+Requires:       python3-devel
 Requires:       python-networkx
 Requires:       python-nose
 Requires:       python3-nose
