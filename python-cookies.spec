@@ -24,7 +24,7 @@ and modifying cookies. It can be used as a replacement of
 Python’s Cookie.py (aka http.cookies).
 
 %package -n python2-%{pypi_name}
-Summary:        Python library for parsing network topology data (eg: dynamic routing protocols, NetJSON, CNML) and detect changes.
+Summary:        Friendlier RFC 6265-compliant cookie parser/renderer
 
 %description -n python2-%{pypi_name}
 cookies.py is a Python module for working with HTTP cookies:
@@ -35,7 +35,7 @@ Python’s Cookie.py (aka http.cookies).
 
 
 %package -n python3-%{pypi_name}
-Summary:        Python library for parsing network topology data (eg: dynamic routing protocols, NetJSON, CNML) and detect changes.
+Summary:        Friendlier RFC 6265-compliant cookie parser/renderer
 
 %description -n python3-%{pypi_name}
 cookies.py is a Python module for working with HTTP cookies:

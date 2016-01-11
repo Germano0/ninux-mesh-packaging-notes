@@ -1,7 +1,7 @@
 %global pypi_name django-netjsongraph
 
 Name:           python-%{pypi_name}
-Version:        0.1.2
+Version:        0.1.3
 Release:        1%{?dist}
 Summary:        Reusable django app for collecting and visualizing network topology
 
@@ -59,13 +59,13 @@ BATMAN-advanced, BMX and NetJSON NetworkGraph.
 %{__python3} setup.py test
 
 # Note that there is no %%files section for the unversioned python module if we are building for several python runtimes
-%files -n python2-%{srcname}
-%license COPYING
+%files -n python2-%{pypi_name}
+%license LICENSE
 %doc README.rst
 %{python2_sitelib}/*
 
-%files -n python3-%{srcname}
-%license COPYING
+%files -n python3-%{pypi_name}
+%license LICENSE
 %doc README.rst
 %{python3_sitelib}/*
 
