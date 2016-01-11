@@ -1,7 +1,7 @@
 %global pypi_name libcnml
 
 Name:           python-%{pypi_name}
-Version:        0.9.2
+Version:        0.9.3
 Release:        1%{?dist}
 Summary:        libcnml is a CNML parser library for Python.
 
