@@ -13,6 +13,10 @@ BuildArch:      noarch
 
 Requires:       python-requests
 Requires:       python3-requests
+Requires:       python2-cookies
+Requires:       python3-cookies
+Requires:       python-six
+
 
 %description
 A utility library for mocking out the requests Python library.
