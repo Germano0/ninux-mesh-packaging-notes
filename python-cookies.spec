@@ -75,5 +75,5 @@ rm test_cookies.py
 %{python3_sitelib}/*
 
 %changelog
-* Mon Jan 11 2015 Germano Massullo <germano.massullo@gmail.com> - 2.2.1-1
+* Mon Jan 11 2016 Germano Massullo <germano.massullo@gmail.com> - 2.2.1-1
 - First Fedora release

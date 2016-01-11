@@ -91,5 +91,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/*
 
 %changelog
-* Mon Jan 11 2015 Germano Massullo <germano.massullo@gmail.com> - 0.9.3-1
+* Mon Jan 11 2016 Germano Massullo <germano.massullo@gmail.com> - 0.9.3-1
 - First Fedora release
