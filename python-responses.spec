@@ -35,7 +35,6 @@ A utility library for mocking out the requests Python library.
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
-# remove rm -rf %{pypi_name}.egg-info
 
 %build
 %py2_build
@@ -49,7 +48,6 @@ A utility library for mocking out the requests Python library.
 #%{__python2} setup.py test
 #%{__python3} setup.py test
 
-# Note that there is no %%files section for the unversioned python module if we are building for several python runtimes
 %files -n python2-%{pypi_name}
 %license LICENSE
 %doc README.rst
@@ -61,3 +59,5 @@ A utility library for mocking out the requests Python library.
 %{python3_sitelib}/*
 
 %changelog
+* Mon Jan 11 2015 Germano Massullo <germano.massullo@gmail.com> - 0.5.0-1
+- First Fedora release

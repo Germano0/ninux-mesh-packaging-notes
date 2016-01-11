@@ -66,15 +66,14 @@ rm test_cookies.py
 %{__python2} setup.py test
 %{__python3} setup.py test
 
-# Note that there is no %%files section for the unversioned python module if we are building for several python runtimes
 %files -n python2-%{pypi_name}
-#%license LICENSE
 %doc README
 %{python2_sitelib}/*
 
 %files -n python3-%{pypi_name}
-#%license LICENSE
 %doc README
 %{python3_sitelib}/*
 
 %changelog
+* Mon Jan 11 2015 Germano Massullo <germano.massullo@gmail.com> - 2.2.1-1
+- First Fedora release

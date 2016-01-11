@@ -12,7 +12,6 @@ Source0:        https://pypi.python.org/packages/source/n/%{pypi_name}/%{pypi_na
 
 BuildArch:      noarch
 
-# EDIT REQUIRES
 Requires:       python-networkx
 Requires:       python-nose
 Requires:       python3-nose
@@ -44,7 +43,6 @@ routing protocols and detecting changes in these topologies.
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
-# rm -rf %{pypi_name}.egg-info
 
 %build
 %py2_build
@@ -58,7 +56,6 @@ routing protocols and detecting changes in these topologies.
 %{__python2} setup.py test
 %{__python3} setup.py test
 
-# Note that there is no %%files section for the unversioned python module if we are building for several python runtimes
 %files -n python2-%{pypi_name}
 %license LICENSE
 %doc README.rst
@@ -70,3 +67,5 @@ routing protocols and detecting changes in these topologies.
 %{python3_sitelib}/*
 
 %changelog
+* Mon Jan 11 2015 Germano Massullo <germano.massullo@gmail.com> - 0.4.7-1
+- First Fedora release
