@@ -6,7 +6,7 @@ Release:        1%{?dist}
 Summary:        Friendlier RFC 6265-compliant cookie parser/renderer
 
 License:        MIT
-URL:            https://github.com/sashahart/cookies
+URL:            https://gitlab.com/sashahart/cookies
 Source0:        https://pypi.python.org/packages/source/c/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 
 BuildArch:      noarch
