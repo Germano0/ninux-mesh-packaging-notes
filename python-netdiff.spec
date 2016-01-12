@@ -77,5 +77,4 @@ routing protocols and detecting changes in these topologies.
 %{python3_sitelib}/*
 
 %changelog
-* Mon Jan 11 2016 Germano Massullo <germano.massullo@gmail.com> - 0.4.7-1
-- First Fedora release
+

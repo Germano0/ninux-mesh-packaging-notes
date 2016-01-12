@@ -61,5 +61,3 @@ A utility library for mocking out the requests Python library.
 %{python3_sitelib}/*
 
 %changelog
-* Mon Jan 11 2016 Germano Massullo <germano.massullo@gmail.com> - 0.5.0-1
-- First Fedora release
