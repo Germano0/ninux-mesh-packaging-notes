@@ -16,6 +16,7 @@ BuildRequires:  python-devel
 BuildRequires:  python3-devel
 BuildRequires:  python2-responses
 BuildRequires:  python3-responses
+
 %description
 Netdiff is a simple Python library that provides utilities for
 parsing network topology data of open source dynamic

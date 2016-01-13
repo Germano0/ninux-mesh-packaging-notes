@@ -32,6 +32,7 @@ reducing dependence from it and its internal tables of the database.
 
 %package -n python2-%{pypi_name}
 Summary:        %{sum}
+%{?python_provide:%python_provide python2-%{pypi_name}}
 Requires:		python-six
 
 %description -n python2-%{pypi_name}
@@ -50,6 +51,7 @@ reducing dependence from it and its internal tables of the database.
 
 %package -n python3-%{pypi_name}
 Summary:        %{sum}
+%{?python_provide:%python_provide python2-%{pypi_name}}
 Requires:		python3-six
 
 %description -n python3-%{pypi_name}

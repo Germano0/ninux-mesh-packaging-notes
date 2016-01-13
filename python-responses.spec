@@ -19,6 +19,8 @@ A utility library for mocking out the requests Python library.
 
 %package -n python2-%{pypi_name}
 Summary:        %{sum}
+%{?python_provide:%python_provide python2-%{pypi_name}}
+
 Requires:       python-requests
 Requires:       python2-cookies
 Requires:       python-six
@@ -28,6 +30,8 @@ A utility library for mocking out the requests Python library.
 
 %package -n python3-%{pypi_name}
 Summary:        %{sum}
+%{?python_provide:%python_provide python2-%{pypi_name}}
+
 Requires:       python3-requests
 Requires:       python3-cookies
 Requires:       python3-six

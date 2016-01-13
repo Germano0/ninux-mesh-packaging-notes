@@ -1,4 +1,5 @@
 %global pypi_name django-netjsongraph
+%global sum Reusable django app for collecting and visualizing network topology
 
 Name:           python-%{pypi_name}
 Version:        0.1.3
@@ -21,7 +22,9 @@ It supports collecting network topology from OLSR,
 BATMAN-advanced, BMX and NetJSON NetworkGraph.
 
 %package -n python2-%{pypi_name}
-Summary:        Reusable django app for collecting and visualizing network topology
+Summary:        %{sum}
+%{?python_provide:%python_provide python2-%{pypi_name}}
+
 Requires:       python-django >= 1.9
 Requires:       python-django < 1.10
 Requires:		python-django-rest-framework >= 3.3
@@ -36,7 +39,9 @@ It supports collecting network topology from OLSR,
 BATMAN-advanced, BMX and NetJSON NetworkGraph.
 
 %package -n python3-%{pypi_name}
-Summary:        Reusable django app for collecting and visualizing network topology
+Summary:        %{sum}
+%{?python_provide:%python_provide python2-%{pypi_name}}
+
 Requires:       python3-django >= 1.9
 Requires:       python3-django < 1.10
 Requires:		python3-django-rest-framework >= 3.3
