@@ -1,13 +1,13 @@
 %global pypi_name responses
+%global sum Reusable django app for collecting and visualizing network topology
 
 Name:           python-%{pypi_name}
 Version:        0.5.0
 Release:        1%{?dist}
-Summary:        A utility library for mocking out the requests Python library.
+Summary:        %{sum}
 License:        Apache License, Version 2.0
 URL:            https://pypi.python.org/pypi/responses/0.5.0
 Source0:        https://github.com/getsentry/responses/archive/%{pypi_name}-%{version}.tar.gz
-
 
 BuildArch:      noarch
 
@@ -18,7 +18,7 @@ BuildRequires:  python3-devel
 A utility library for mocking out the requests Python library.
 
 %package -n python2-%{pypi_name}
-Summary:        Reusable django app for collecting and visualizing network topology
+Summary:        %{sum}
 Requires:       python-requests
 Requires:       python2-cookies
 Requires:       python-six
@@ -27,7 +27,7 @@ Requires:       python-six
 A utility library for mocking out the requests Python library.
 
 %package -n python3-%{pypi_name}
-Summary:        Reusable django app for collecting and visualizing network topology
+Summary:        %{sum}
 Requires:       python3-requests
 Requires:       python3-cookies
 Requires:       python3-six
@@ -46,9 +46,10 @@ A utility library for mocking out the requests Python library.
 %py2_install
 %py3_install
 
-#%check
-#%{__python2} setup.py test
-#%{__python3} setup.py test
+# check returned many errors, must check why
+%check
+%{__python2} setup.py test
+%{__python3} setup.py test
 
 %files -n python2-%{pypi_name}
 %license LICENSE
