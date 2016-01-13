@@ -11,7 +11,7 @@ Source0:        https://github.com/getsentry/responses/archive/%{pypi_name}-%{ve
 
 BuildArch:      noarch
 
-BuildRequires:  python-devel
+BuildRequires:  python2-devel
 BuildRequires:  python3-devel
 
 %description
@@ -21,9 +21,9 @@ A utility library for mocking out the requests Python library.
 Summary:        %{sum}
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
-Requires:       python-requests
+Requires:       python2-requests
 Requires:       python2-cookies
-Requires:       python-six
+Requires:       python2-six
 
 %description -n python2-%{pypi_name}
 A utility library for mocking out the requests Python library.

@@ -12,7 +12,7 @@ Source0:        https://pypi.python.org/packages/source/d/%{pypi_name}/%{pypi_na
 
 BuildArch:      noarch
 
-BuildRequires:  python-devel
+BuildRequires:  python2-devel
 BuildRequires:  python3-devel
 
 %description
@@ -25,12 +25,12 @@ BATMAN-advanced, BMX and NetJSON NetworkGraph.
 Summary:        %{sum}
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
-Requires:       python-django >= 1.9
-Requires:       python-django < 1.10
-Requires:		python-django-rest-framework >= 3.3
-Requires:		python-django-rest-framework < 3.4
+Requires:       python2-django >= 1.9
+Requires:       python2-django < 1.10
+Requires:		python2-django-rest-framework >= 3.3
+Requires:		python2-django-rest-framework < 3.4
 Requires:		python2-netdiff
-Requires:		python-six
+Requires:		python2-six
 
 %description -n python2-%{pypi_name}
 django-netjsongraph is a network topology collector and
