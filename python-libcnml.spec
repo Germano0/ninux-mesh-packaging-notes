@@ -1,9 +1,10 @@
 %global pypi_name libcnml
+%global sum libcnml is a CNML parser library for Python
 
 Name:           python-%{pypi_name}
 Version:        0.9.3
 Release:        1%{?dist}
-Summary:        libcnml is a CNML parser library for Python.
+Summary:        %{sum}
 
 License:        GPLv3
 URL:            https://github.com/PabloCastellano/libcnml
@@ -30,7 +31,7 @@ functionalities independently of the web application used to show the data,
 reducing dependence from it and its internal tables of the database.
 
 %package -n python2-%{pypi_name}
-Summary:        libcnml is a CNML parser library for Python.
+Summary:        %{sum}
 Requires:		python-six
 
 %description -n python2-%{pypi_name}
@@ -48,7 +49,7 @@ functionalities independently of the web application used to show the data,
 reducing dependence from it and its internal tables of the database.
 
 %package -n python3-%{pypi_name}
-Summary:        libcnml is a CNML parser library for Python.
+Summary:        %{sum}
 Requires:		python3-six
 
 %description -n python3-%{pypi_name}
@@ -83,14 +84,13 @@ rm -rf %{pypi_name}.egg-info
 
 %files -n python2-%{pypi_name}
 %license LICENSE.txt
-#%doc README.rst
+%doc README.md
 %{python2_sitelib}/*
 
 %files -n python3-%{pypi_name}
 %license LICENSE.txt
-#%doc README.rst
+%doc README.md
 %{python3_sitelib}/*
 
 %changelog
-* Mon Jan 11 2016 Germano Massullo <germano.massullo@gmail.com> - 0.9.3-1
-- First Fedora release
+
