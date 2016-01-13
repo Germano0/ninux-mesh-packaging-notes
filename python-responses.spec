@@ -6,7 +6,7 @@ Version:        0.5.0
 Release:        1%{?dist}
 Summary:        %{sum}
 License:        Apache License, Version 2.0
-URL:            https://pypi.python.org/pypi/responses/0.5.0
+URL:            https://pypi.python.org/pypi/responses/
 Source0:        https://github.com/getsentry/responses/archive/%{pypi_name}-%{version}.tar.gz
 
 BuildArch:      noarch
