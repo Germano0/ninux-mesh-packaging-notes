@@ -13,7 +13,7 @@ Source0:        https://pypi.python.org/packages/source/l/%{pypi_name}/%{pypi_na
 
 BuildArch:      noarch
 
-BuildRequires:  python-devel
+BuildRequires:  python2-devel
 BuildRequires:  python3-devel
 
 %description
@@ -33,7 +33,7 @@ reducing dependence from it and its internal tables of the database.
 %package -n python2-%{pypi_name}
 Summary:        %{sum}
 %{?python_provide:%python_provide python2-%{pypi_name}}
-Requires:		python-six
+Requires:		python2-six
 
 %description -n python2-%{pypi_name}
 Community Network Mark Up Language (CNML) is a project that aims to define
