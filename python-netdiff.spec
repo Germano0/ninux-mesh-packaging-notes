@@ -28,7 +28,6 @@ Requires:       python-mock
 Requires:       python-networkx
 Requires:       python-nose
 Requires:       python-requests
-#Requires:       python2-responses
 Requires:       python-six
 
 %description -n python2-%{pypi_name}
@@ -43,7 +42,6 @@ Requires:       python3-mock
 Requires:       python3-networkx
 Requires:       python3-nose
 Requires:       python3-requests
-#Requires:       python3-responses
 Requires:       python3-six
 
 %description -n python3-%{pypi_name}
