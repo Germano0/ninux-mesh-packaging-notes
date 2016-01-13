@@ -13,7 +13,7 @@ Source1:		LICENSE
 
 BuildArch:      noarch
 
-BuildRequires:  python-devel
+BuildRequires:  python2-devel
 BuildRequires:  python3-devel
 BuildRequires:  pytest
 BuildRequires:  python3-pytest
