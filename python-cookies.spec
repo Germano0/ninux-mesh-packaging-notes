@@ -9,7 +9,7 @@ Summary:        Friendlier RFC 6265-compliant cookie parser/renderer
 License:        MIT
 URL:            https://gitlab.com/sashahart/cookies
 Source0:        https://pypi.python.org/packages/source/c/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
-Source1:		LICENSE
+Source1:		https://gitlab.com/sashahart/cookies/raw/master/LICENSE
 
 BuildArch:      noarch
 
@@ -82,3 +82,5 @@ rm test_cookies.py
 %{python3_sitelib}/*
 
 %changelog
+* Fri Jan 15 2016 Germano Massullo <germano.massullo@gmail.com> - 2.2.1-1
+- First commit on Fedora's Git
