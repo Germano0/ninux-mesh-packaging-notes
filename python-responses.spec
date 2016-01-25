@@ -63,11 +63,12 @@ A utility library for mocking out the requests Python library.
 %py3_install
 %endif # if with_python3
 
-%check
-%{__python2} setup.py test
-%if 0%{?with_python3}
-%{__python3} setup.py test
-%endif # if with_python3
+# upstream developer has not 
+#%check
+#%{__python2} setup.py test
+#%if 0%{?with_python3}
+#%{__python3} setup.py test
+#%endif # if with_python3
 
 %files -n python2-%{pypi_name}
 %license LICENSE
@@ -82,5 +83,9 @@ A utility library for mocking out the requests Python library.
 %endif # if with_python3
 
 %changelog
-* Sat Jan 23 2016 Germano Massullo <germano.massullo@gmail.com> - 0.5.1-1
-- First commit on Fedora's Git
+* Mon Jan 25 2016 Germano Massullo <germano.massullo@gmail.com> - 0.5.1-1
+- LICENSE file added in upstream update
+- Commented %check section due test file missing in pypi release. See https://github.com/getsentry/responses/issues/98
+
+* Sat Jan 23 2016 Germano Massullo <germano.massullo@gmail.com> - 0.5.0-1
+- Package review submission
