@@ -1,5 +1,9 @@
 %global pypi_name libcnml
 %global sum libcnml is a CNML parser library for Python
+# Python 3 only for Fedora for now.
+%if 0%{?fedora} > 12
+%global with_python3 1
+%endif
 
 Name:           python-%{pypi_name}
 Version:        0.9.3
@@ -14,7 +18,9 @@ Source0:        https://pypi.python.org/packages/source/l/%{pypi_name}/%{pypi_na
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
+%if 0%{?with_python3}
 BuildRequires:  python3-devel
+%endif # if with_python3
 
 %description
 Community Network Mark Up Language (CNML) is a project that aims to define
@@ -49,6 +55,7 @@ Some advantages of using CNML is that it allows to uncouple different
 functionalities independently of the web application used to show the data,
 reducing dependence from it and its internal tables of the database.
 
+%if 0%{?with_python3}
 %package -n python3-%{pypi_name}
 Summary:        %{sum}
 %{?python_provide:%python_provide python2-%{pypi_name}}
@@ -67,6 +74,7 @@ from other implementations and previous concepts like nodeXchange and SNDX.
 Some advantages of using CNML is that it allows to uncouple different
 functionalities independently of the web application used to show the data,
 reducing dependence from it and its internal tables of the database.
+%endif # if with_python3
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
@@ -74,25 +82,34 @@ rm -rf %{pypi_name}.egg-info
 
 %build
 %py2_build
+%if 0%{?with_python3}
 %py3_build
+%endif # if with_python3
 
 %install
 %py2_install
+%if 0%{?with_python3}
 %py3_install
+%endif # if with_python3
 
 %check
 %{__python2} setup.py test
+%if 0%{?with_python3}
 %{__python3} setup.py test
+%endif # if with_python3
 
 %files -n python2-%{pypi_name}
 %license LICENSE.txt
 %doc README.md
 %{python2_sitelib}/*
 
+%if 0%{?with_python3}
 %files -n python3-%{pypi_name}
 %license LICENSE.txt
 %doc README.md
 %{python3_sitelib}/*
+%endif # if with_python3
 
 %changelog
-
+* Sat Jan 23 2016 Germano Massullo <germano.massullo@gmail.com> - 0.9.3-1
+- First commit on Fedora's Git
