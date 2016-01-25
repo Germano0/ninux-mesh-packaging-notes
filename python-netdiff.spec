@@ -18,10 +18,23 @@ Source0:        https://pypi.python.org/packages/source/n/%{pypi_name}/%{pypi_na
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
+BuildRequires:  python2-libcnml
+BuildRequires:  python2-mock
+BuildRequires:  python2-networkx
+BuildRequires:  python2-nose
+BuildRequires:  python2-requests
 BuildRequires:  python2-responses
+BuildRequires:  python2-six
 %if 0%{?with_python3}
 BuildRequires:  python3-devel
+BuildRequires:  python3-libcnml
+BuildRequires:  python3-mock
+BuildRequires:  python3-networkx
+BuildRequires:  python3-nose
+BuildRequires:  python3-requests
 BuildRequires:  python3-responses
+BuildRequires:  python3-six
+
 %endif # if with_python3
 
 %description
