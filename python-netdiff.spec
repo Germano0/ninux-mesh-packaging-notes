@@ -19,8 +19,10 @@ BuildArch:      noarch
 
 BuildRequires:  python2-devel
 BuildRequires:  python2-libcnml
-BuildRequires:  python2-mock
-BuildRequires:  python2-networkx
+# python2-mock is missing, see https://bugzilla.redhat.com/show_bug.cgi?id=1301766
+BuildRequires:  python-mock
+#python2-networkx is missing, see https://bugzilla.redhat.com/show_bug.cgi?id=1301767
+BuildRequires:  python-networkx
 BuildRequires:  python2-nose
 BuildRequires:  python2-requests
 BuildRequires:  python2-responses
@@ -46,8 +48,10 @@ routing protocols and detecting changes in these topologies.
 Summary:        %{sum}
 %{?python_provide:%python_provide python2-%{pypi_name}}
 Requires:       python2-libcnml
-Requires:       python2-mock
-Requires:       python2-networkx
+# python2-mock is missing, see https://bugzilla.redhat.com/show_bug.cgi?id=1301766
+Requires:       python-mock
+#python2-networkx is missing, see https://bugzilla.redhat.com/show_bug.cgi?id=1301767
+Requires:       python-networkx
 Requires:       python2-nose
 Requires:       python2-requests
 Requires:       python2-six
