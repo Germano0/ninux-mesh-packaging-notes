@@ -58,7 +58,7 @@ reducing dependence from it and its internal tables of the database.
 %if 0%{?with_python3}
 %package -n python3-%{pypi_name}
 Summary:        %{sum}
-%{?python_provide:%python_provide python2-%{pypi_name}}
+%{?python_provide:%python_provide python3-%{pypi_name}}
 Requires:		python3-six
 
 %description -n python3-%{pypi_name}
