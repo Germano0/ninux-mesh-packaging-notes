@@ -40,7 +40,7 @@ BATMAN-advanced, BMX and NetJSON NetworkGraph.
 
 %package -n python3-%{pypi_name}
 Summary:        %{sum}
-%{?python_provide:%python_provide python2-%{pypi_name}}
+%{?python_provide:%python_provide python3-%{pypi_name}}
 
 Requires:       python3-django >= 1.9
 Requires:       python3-django < 1.10
