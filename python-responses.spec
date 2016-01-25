@@ -1,18 +1,14 @@
 %global pypi_name responses
-<<<<<<< HEAD
 %global sum Reusable django app for collecting and visualizing network topology
 # Python 3 only for Fedora for now.
 %if 0%{?fedora} > 12
 %global with_python3 1
 %endif
 
-=======
->>>>>>> e06bfd5e583cc04e5b27c20a5f35d3e747b47aee
 
 Name:           python-%{pypi_name}
 Version:        0.5.1
 Release:        1%{?dist}
-<<<<<<< HEAD
 Summary:        %{sum}
 License:        ASL 2.0
 URL:            https://github.com/getsentry/responses
@@ -22,17 +18,6 @@ BuildArch:      noarch
 
 BuildRequires:  python2-devel
 %if 0%{?with_python3}
-=======
-Summary:        A utility library for mocking out the requests Python library.
-License:        Apache License, Version 2.0
-URL:            https://pypi.python.org/pypi/responses/0.5.0
-Source0:        https://github.com/getsentry/responses/archive/%{pypi_name}-%{version}.tar.gz
-Patch0:         %{name}-coverage.patch
-
-BuildArch:      noarch
-
-BuildRequires:  python-devel
->>>>>>> e06bfd5e583cc04e5b27c20a5f35d3e747b47aee
 BuildRequires:  python3-devel
 %endif # if with_python3
 
@@ -40,17 +25,21 @@ BuildRequires:  python3-devel
 A utility library for mocking out the requests Python library.
 
 %package -n python2-%{pypi_name}
-Summary:        Reusable django app for collecting and visualizing network topology
-Requires:       python-requests
+Summary:        %{sum}
+%{?python_provide:%python_provide python2-%{pypi_name}}
+
+Requires:       python2-requests
 Requires:       python2-cookies
-Requires:       python-six
+Requires:       python2-six
 
 %description -n python2-%{pypi_name}
 A utility library for mocking out the requests Python library.
 
 %if 0%{?with_python3}
 %package -n python3-%{pypi_name}
-Summary:        Reusable django app for collecting and visualizing network topology
+Summary:        %{sum}
+%{?python_provide:%python_provide python2-%{pypi_name}}
+
 Requires:       python3-requests
 Requires:       python3-cookies
 Requires:       python3-six
@@ -61,7 +50,6 @@ A utility library for mocking out the requests Python library.
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
-%patch0 -p1
 
 %build
 %py2_build
@@ -75,17 +63,11 @@ A utility library for mocking out the requests Python library.
 %py3_install
 %endif # if with_python3
 
-<<<<<<< HEAD
 %check
 %{__python2} setup.py test
 %if 0%{?with_python3}
 %{__python3} setup.py test
 %endif # if with_python3
-=======
-#%check
-#%{__python2} setup.py test
-#%{__python3} setup.py test
->>>>>>> e06bfd5e583cc04e5b27c20a5f35d3e747b47aee
 
 %files -n python2-%{pypi_name}
 %license LICENSE
@@ -100,10 +82,5 @@ A utility library for mocking out the requests Python library.
 %endif # if with_python3
 
 %changelog
-<<<<<<< HEAD
 * Sat Jan 23 2016 Germano Massullo <germano.massullo@gmail.com> - 0.5.1-1
 - First commit on Fedora's Git
-=======
-* Mon Jan 11 2016 Germano Massullo <germano.massullo@gmail.com> - 0.5.0-1
-- First Fedora release
->>>>>>> e06bfd5e583cc04e5b27c20a5f35d3e747b47aee
