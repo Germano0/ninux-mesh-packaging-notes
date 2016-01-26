@@ -18,7 +18,7 @@ Source0:        https://pypi.python.org/packages/source/l/%{pypi_name}/%{pypi_na
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
-BuildRequires:	python2-six
+BuildRequires:  python2-six
 %if 0%{?with_python3}
 BuildRequires:  python3-devel
 BuildRequires:  python3-six
