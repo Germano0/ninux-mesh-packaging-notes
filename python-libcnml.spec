@@ -6,7 +6,7 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        0.9.3
+Version:        0.9.4
 Release:        1%{?dist}
 Summary:        %{sum}
 
@@ -94,11 +94,14 @@ rm -rf %{pypi_name}.egg-info
 %py3_install
 %endif # if with_python3
 
-%check
-%{__python2} setup.py test
-%if 0%{?with_python3}
-%{__python3} setup.py test
-%endif # if with_python3
+# Disabled tests since they rely on internet connection and Koji does not allow
+# internet connection during package creating process. Further informations at
+# https://github.com/PabloCastellano/libcnml/issues/18
+#%check
+#%{__python2} setup.py test
+#%if 0%{?with_python3}
+#%{__python3} setup.py test
+#%endif # if with_python3
 
 %files -n python2-%{pypi_name}
 %license LICENSE.txt
@@ -113,5 +116,5 @@ rm -rf %{pypi_name}.egg-info
 %endif # if with_python3
 
 %changelog
-* Sat Jan 23 2016 Germano Massullo <germano.massullo@gmail.com> - 0.9.3-1
+* Sat Jan 23 2016 Germano Massullo <germano.massullo@gmail.com> - 0.9.4-1
 - First commit on Fedora's Git
