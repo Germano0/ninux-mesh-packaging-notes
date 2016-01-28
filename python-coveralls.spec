@@ -17,16 +17,13 @@ Source0:        https://pypi.python.org/packages/source/c/%{pypi_name}/%{pypi_na
 
 BuildArch:      noarch
 
-BuildRequires:  python2-docopt
 BuildRequires:  python2-coverage
 BuildRequires:  python2-docopt
 BuildRequires:  python2-requests
 %if 0%{?with_python3}
-BuildRequires:  python3-docopt
 BuildRequires:  python3-coverage
 BuildRequires:  python3-docopt
 BuildRequires:  python3-requests
-
 %endif # if with_python3
 
 %description
@@ -38,8 +35,8 @@ ruining your own security! For private projects there is Coveralls Pro.
 %package -n python2-%{pypi_name}
 Summary:        %{sum}
 %{?python_provide:%python_provide python2-%{pypi_name}}
-Requires:  python2-docopt
 Requires:  python2-coverage
+Requires:  python2-docopt
 Requires:  python2-requests
 
 %description -n python2-%{pypi_name}
@@ -52,8 +49,8 @@ ruining your own security! For private projects there is Coveralls Pro.
 %package -n python3-%{pypi_name}
 Summary:        %{sum}
 %{?python_provide:%python_provide python3-%{pypi_name}}
-Requires:  python3-docopt
 Requires:  python3-coverage
+Requires:  python3-docopt
 Requires:  python3-requests
 
 %description -n python3-%{pypi_name}
