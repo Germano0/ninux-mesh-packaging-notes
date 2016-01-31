@@ -69,7 +69,8 @@ A utility library for mocking out the requests Python library.
 %py3_install
 %endif # if with_python3
 
-# upstream developer has not inserted tests in pypi release
+# upstream developer has not inserted tests in the current pypi release.
+# Uncomment in version > 0.5.1
 #%check
 #%{__python2} setup.py test
 #%if 0%{?with_python3}
