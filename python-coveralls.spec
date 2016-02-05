@@ -18,10 +18,12 @@ Source0:        https://pypi.python.org/packages/source/c/%{pypi_name}/%{pypi_na
 BuildArch:      noarch
 
 BuildRequires:  python2-coverage
+BuildRequires:  python2-devel
 BuildRequires:  python2-docopt
 BuildRequires:  python2-requests
 %if 0%{?with_python3}
 BuildRequires:  python3-coverage
+BuildRequires:  python3-devel
 BuildRequires:  python3-docopt
 BuildRequires:  python3-requests
 %endif # if with_python3
