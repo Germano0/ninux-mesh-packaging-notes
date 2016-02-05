@@ -98,13 +98,13 @@ and instead can write only the help message--*the way you want it*.
 %endif # if with_python3
 
 %files -n python2-%{pypi_name}
-%license LICENSE
+%license LICENSE-MIT
 %doc README.rst
 %{python2_sitelib}/*
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
-%license LICENSE
+%license LICENSE-MIT
 %doc README.rst
 %{python3_sitelib}/*
 %endif # if with_python3
