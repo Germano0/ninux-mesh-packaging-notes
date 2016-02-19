@@ -10,7 +10,7 @@ Version:        1.1
 Release:        1%{?dist}
 Summary:        %{sum}
 
-License:        MIT
+LICENCE:        MIT
 URL:            http://github.com/coagulant/coveralls-python
 Source0:        https://pypi.python.org/packages/source/c/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 
@@ -84,14 +84,14 @@ ruining your own security! For private projects there is Coveralls Pro.
 %endif # if with_python3
 
 %files -n python2-%{pypi_name}
-%license LICENSE
+%LICENCE LICENCE
 %doc README.rst
 %{python2_sitelib}/*
 %{_bindir}/python2-coveralls
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
-%license LICENSE
+%LICENCE LICENCE
 %doc README.rst
 %{python3_sitelib}/*
 %{_bindir}/python3-coveralls
