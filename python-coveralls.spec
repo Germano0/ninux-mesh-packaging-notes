@@ -1,5 +1,5 @@
 %global pypi_name coveralls
-%global sum Coveralls.io provides seamless integration with coverage.py in your python projects
+%global sum Coveralls.io provides seamless integration with coverage.py
 # Python 3 only for Fedora for now.
 %if 0%{?fedora} > 12
 %global with_python3 1
