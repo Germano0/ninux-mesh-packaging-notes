@@ -77,8 +77,10 @@ ruining your own security! For private projects there is Coveralls Pro.
 
 %install
 %py2_install
+cp %{buildroot}/%{_bindir}/coveralls %{buildroot}/%{_bindir}/coveralls-py2
 %if 0%{?with_python3}
 %py3_install
+cp %{buildroot}/%{_bindir}/coveralls %{buildroot}/%{_bindir}/coveralls-py3
 %endif # if with_python3
 
 %check
@@ -91,17 +93,20 @@ ruining your own security! For private projects there is Coveralls Pro.
 %license LICENCE
 %doc README.rst
 %{python2_sitelib}/*
-#%{_bindir}/python2-coveralls
+%{_bindir}/coveralls-py2
+%if 0%{!?with_python3}
+%{_bindir}/coveralls
+%endif # if with_python3
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
 %license LICENCE
 %doc README.rst
 %{python3_sitelib}/*
-#%{_bindir}/python3-coveralls
+%{_bindir}/coveralls
+%{_bindir}/coveralls-py3
 %endif # if with_python3
 
 %changelog
 * Sat Jan 23 2016 Germano Massullo <germano.massullo@gmail.com> - 1.1-1
 - First commit on Fedora's Git
- 
