@@ -96,7 +96,7 @@ cp %{buildroot}/%{_bindir}/coveralls %{buildroot}/%{_bindir}/coveralls-py3
 %{_bindir}/coveralls-py2
 %if 0%{!?with_python3}
 %{_bindir}/coveralls
-%endif # if with_python3
+%endif # if not with_python3
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
