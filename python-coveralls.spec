@@ -80,10 +80,14 @@ Coveralls Pro.
 
 %install
 %py2_install
-cp %{buildroot}/%{_bindir}/coveralls %{buildroot}/%{_bindir}/coveralls-py2
+cp %{buildroot}%{_bindir}/coveralls %{buildroot}%{_bindir}/coveralls-py2
+# See https://github.com/coagulant/coveralls-python/pull/105
+chmod 755 %{buildroot}%{python2_sitelib}/coveralls/cli.py
 %if 0%{?with_python3}
 %py3_install
-cp %{buildroot}/%{_bindir}/coveralls %{buildroot}/%{_bindir}/coveralls-py3
+cp %{buildroot}%{_bindir}/coveralls %{buildroot}%{_bindir}/coveralls-py3
+# See https://github.com/coagulant/coveralls-python/pull/105
+chmod 755 %{buildroot}%{python3_sitelib}/coveralls/cli.py
 %endif # if with_python3
 
 %check
