@@ -88,14 +88,14 @@ ruining your own security! For private projects there is Coveralls Pro.
 %endif # if with_python3
 
 %files -n python2-%{pypi_name}
-%LICENSE LICENCE
+%license LICENCE
 %doc README.rst
 %{python2_sitelib}/*
 %{_bindir}/python2-coveralls
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
-%LICENSE LICENCE
+%license LICENCE
 %doc README.rst
 %{python3_sitelib}/*
 %{_bindir}/python3-coveralls
