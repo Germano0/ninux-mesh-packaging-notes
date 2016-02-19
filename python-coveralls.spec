@@ -19,7 +19,7 @@ BuildArch:      noarch
 
 BuildRequires:  python2-coverage
 BuildRequires:  python2-devel
-BuildRequires:  python2-docopt
+BuildRequires:  python-docopt
 BuildRequires:  python2-requests
 %if 0%{?with_python3}
 BuildRequires:  python3-coverage
@@ -38,7 +38,7 @@ ruining your own security! For private projects there is Coveralls Pro.
 Summary:        %{sum}
 %{?python_provide:%python_provide python2-%{pypi_name}}
 Requires:  python2-coverage
-Requires:  python2-docopt
+Requires:  python-docopt
 Requires:  python2-requests
 
 %description -n python2-%{pypi_name}
@@ -87,12 +87,14 @@ ruining your own security! For private projects there is Coveralls Pro.
 %license LICENSE
 %doc README.rst
 %{python2_sitelib}/*
+%{_bindir}/python2-coveralls
 
 %if 0%{?with_python3}
 %files -n python3-%{pypi_name}
 %license LICENSE
 %doc README.rst
 %{python3_sitelib}/*
+%{_bindir}/python3-coveralls
 %endif # if with_python3
 
 %changelog
