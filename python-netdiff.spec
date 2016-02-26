@@ -17,8 +17,6 @@ Source0:        https://pypi.python.org/packages/source/n/%{pypi_name}/%{pypi_na
 
 BuildArch:      noarch
 
-BuildRequires:  python2-coveralls
-BuildRequires:  python2-coverage
 BuildRequires:  python2-devel
 BuildRequires:  python2-libcnml
 # python2-mock is missing, see https://bugzilla.redhat.com/show_bug.cgi?id=1301766
@@ -30,8 +28,6 @@ BuildRequires:  python2-requests
 BuildRequires:  python2-responses
 BuildRequires:  python2-six
 %if 0%{?with_python3}
-BuildRequires:  python3-coveralls
-BuildRequires:  python3-coverage
 BuildRequires:  python3-devel
 BuildRequires:  python3-libcnml
 BuildRequires:  python3-mock
@@ -51,8 +47,6 @@ routing protocols and detecting changes in these topologies.
 %package -n python2-%{pypi_name}
 Summary:        %{sum}
 %{?python_provide:%python_provide python2-%{pypi_name}}
-Requires:       python2-coveralls
-Requires:       python2-coverage
 Requires:       python2-libcnml
 # python2-mock is missing, see https://bugzilla.redhat.com/show_bug.cgi?id=1301766
 Requires:       python-mock
@@ -71,8 +65,6 @@ routing protocols and detecting changes in these topologies.
 %package -n python3-%{pypi_name}
 Summary:        %{sum}
 %{?python_provide:%python_provide python3-%{pypi_name}}
-Requires:       python3-coveralls
-Requires:       python3-coverage
 Requires:       python3-libcnml
 Requires:       python3-mock
 Requires:       python3-networkx
