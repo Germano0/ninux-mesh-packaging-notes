@@ -17,19 +17,19 @@ Source0:        https://files.pythonhosted.org/packages/source/%(n=%{pypi_name};
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
-BuildRequires:  python2-django >= 1.9, < 1.10
+BuildRequires:  python2-django >= 1.9, python2-django < 1.10
 BuildRequires:  python2-django-model-utils
-BuildRequires:  python2-django-rest-framework >= 3.3, < 3.4
-BuildRequires:  python2-netdiff >= 0.4.7, <= 5.0
+BuildRequires:  python2-django-rest-framework >= 3.3, python2-django-rest-framework < 3.4
+BuildRequires:  python2-netdiff >= 0.4.7, python2-netdiff <= 5.0
 BuildRequires:  python2-setuptools
 BuildRequires:  python2-six
 
 %if 0%{?with_python3}
 BuildRequires:  python3-devel
-BuildRequires:  python3-django >= 1.9, < 1.10
+BuildRequires:  python3-django >= 1.9, python3-django < 1.10
 BuildRequires:  python3-django-model-utils
-BuildRequires:  python3-django-rest-framework >= 3.3, < 3.4
-BuildRequires:  python3-netdiff >= 0.4.7, <= 5.0
+BuildRequires:  python3-django-rest-framework >= 3.3, python3-django-rest-framework < 3.4
+BuildRequires:  python3-netdiff >= 0.4.7, python3-netdiff <= 5.0
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-six
 %endif
@@ -44,10 +44,10 @@ BATMAN-advanced, BMX and NetJSON NetworkGraph.
 Summary:        %{Summary}
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
-Requires:       python2-django >= 1.9, < 1.10
+Requires:       python2-django >= 1.9, python2-django < 1.10
 Requires:       python2-django-model-utils
-Requires:       python2-django-rest-framework >= 3.3, < 3.4
-Requires:       python2-netdiff >= 0.4.7, <= 5.0
+Requires:       python2-django-rest-framework >= 3.3, python2-django-rest-framework < 3.4
+Requires:       python2-netdiff >= 0.4.7, python2-netdiff <= 5.0
 Requires:       python2-six
 
 %description -n python2-%{pypi_name}
@@ -60,10 +60,10 @@ BATMAN-advanced, BMX and NetJSON NetworkGraph.
 Summary:        %{Summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-Requires:       python3-django >= 1.9, < 1.10
+Requires:       python3-django >= 1.9, python3-django < 1.10
 Requires:       python3-django-model-utils
-Requires:       python3-django-rest-framework >= 3.3, < 3.4
-Requires:       python3-netdiff >= 0.4.7, <= 5.0
+Requires:       python3-django-rest-framework >= 3.3, python3-django-rest-framework < 3.4
+Requires:       python3-netdiff >= 0.4.7, python3-netdiff <= 5.0
 Requires:       python3-six
 
 %description -n python3-%{pypi_name}
