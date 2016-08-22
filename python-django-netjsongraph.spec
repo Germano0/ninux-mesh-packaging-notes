@@ -85,8 +85,10 @@ BATMAN-advanced, BMX and NetJSON NetworkGraph.
 %py3_install
 
 %check
-%{__python2} setup.py test
-%{__python3} setup.py test
+# tests require internet connection, but Koji does not
+# allow it
+# %{__python2} setup.py test
+# %{__python3} setup.py test
 
 %files -n python2-%{pypi_name}
 %license LICENSE
