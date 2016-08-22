@@ -28,6 +28,7 @@ BuildRequires:  python3-devel
 BuildRequires:  python3-django >= 1.9, < 1.10
 BuildRequires:  python3-django-model-utils
 BuildRequires:  python3-django-rest-framework >= 3.3, < 3.4
+BuildRequires:  python3-netdiff >= 0.4.7, <= 5.0
 BuildRequires:  python3-setuptools
 %endif
 
