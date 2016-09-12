@@ -20,6 +20,8 @@ BuildRequires:  python2-devel
 BuildRequires:  python2-django
 BuildRequires:  python2-setuptools
 BuildRequires:  python2-django-formtools
+# for testing purposes
+BuildRequires:  sqlite
 %if 0%{?with_python3}
 BuildRequires:  python3-django
 BuildRequires:  python3-devel
@@ -67,6 +69,9 @@ It silently takes care of serialization. To use, simply add the field to one of 
 %endif # if with_python3
 
 %check
+sqlite3 FILETEMP
+export DB_ENGINE=sqlite3
+export DB_NAME="mydb"
 %{__python2} setup.py test
 %if 0%{?with_python3}
 %{__python3} setup.py test
