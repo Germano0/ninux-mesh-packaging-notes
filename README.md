@@ -6,7 +6,7 @@ The spec files inside the repo are spec files that
 have not yet been submitted for Package Review into
 RedHat's bugzilla.
 
-When a package goes to stable, it will be removed
-from this repository.
+WHEN A PACKAGE GOES TO STABLE, ALL ITS REFERENCIES
+WILL BE REMOVED FROM THIS REPOSITORY.
 
 Feel free to contribute if you want
