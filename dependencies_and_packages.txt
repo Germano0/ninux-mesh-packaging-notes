@@ -15,5 +15,5 @@ To do                   python-django-x509
 | MISSING DEPENDENCIES |
 |======================|
 
-NAME                                         MISSING DEPENDENCIES
+AFFECTED PACKAGE'S NAME                      MISSING DEPENDENCIES
 python-django-netjsonconfig                  django-sortedm2m
