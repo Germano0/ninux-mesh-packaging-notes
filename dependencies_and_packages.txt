@@ -2,7 +2,6 @@
 | PACKAGING IN PROGRESS/PLANNED |
 |===============================|
 
-
 STATUS                  NAME                               RedHat Bugzilla id                                           Used by
 Review in progress      python-django-jsonfield            https://bugzilla.redhat.com/show_bug.cgi?id=1375222          python-django-netjsonconfig
 
