@@ -8,6 +8,8 @@ problems with tests,
 see [1]
                       
 Review in progress      python-django-netjsongraph         https://bugzilla.redhat.com/show_bug.cgi?id=1369213
+must unbundle js-d3
+library
 To do                   python-django-netjsonconfig
 To do                   nodeshot
 To do                   python-django-x509
