@@ -6,7 +6,7 @@ STATUS                  NAME                               RedHat Bugzilla id   
 Review in progress,     python-django-jsonfield            https://bugzilla.redhat.com/show_bug.cgi?id=1375222          python-django-netjsonconfig
 problems with tests,
 see [1].
-Moreover, reading Fedora mock build errors I contacted upstream developer to ask if the library is Python 3 only.
+Update: I have to test patch https://github.com/bradjasper/django-jsonfield/commit/d2d2c58815501b13d8bc7988c06594135afae39f that should solve the problem
                       
 Review in progress      python-django-netjsongraph         https://bugzilla.redhat.com/show_bug.cgi?id=1369213
 must unbundle js-d3
