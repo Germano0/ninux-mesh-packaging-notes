@@ -8,7 +8,12 @@ Review in progress     python-django-jsonfield            https://bugzilla.redha
                       
 Review in progress      python-django-netjsongraph         https://bugzilla.redhat.com/show_bug.cgi?id=1369213
 must unbundle js-d3
-library
+library.It is an app
+but it is still not yet
+used by any software. d3
+unbundling requires an high
+effort, so I am still
+evaluating if I can do it
 To do                   python-django-netjsonconfig
 To do                   nodeshot
 To do                   python-django-x509
