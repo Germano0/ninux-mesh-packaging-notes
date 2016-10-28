@@ -3,7 +3,7 @@
 |===============================|
 
 STATUS                  NAME                               RedHat Bugzilla id                                           Used by
-Review in progress     python-django-jsonfield            https://bugzilla.redhat.com/show_bug.cgi?id=1375222          python-django-netjsonconfig
+Package approved        python-django-jsonfield            https://bugzilla.redhat.com/show_bug.cgi?id=1375222          python-django-netjsonconfig
 
                       
 Review in progress      python-django-netjsongraph         https://bugzilla.redhat.com/show_bug.cgi?id=1369213
