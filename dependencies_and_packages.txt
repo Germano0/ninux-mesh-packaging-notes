@@ -15,6 +15,7 @@ unbundling requires an high
 effort, so I am still
 evaluating if I can do it
 To do                   python-django-netjsonconfig
+To do                   python-netjsonconfig
 To do                   nodeshot
 To do                   python-django-x509
 
