@@ -11,38 +11,54 @@ Source0:        https://files.pythonhosted.org/packages/source/%(n=%{pypi_name};
 
 BuildArch:      noarch
 
+
+BuildRequires:  python-setuptools
 BuildRequires:  python2-devel
-BuildRequires:  python2-jinja2
-BuildRequires:  python2-setuptools
-BuildRequires:  python2-jsonschema
-BuildRequires:  python-six
-BuildRequires:  python3-devel
-BuildRequires:  python3-jinja2
-BuildRequires:  python3-setuptools
-BuildRequires:  python3-six
+BuildRequires:  python%{python3_pkgversion}-setuptools
+BuildRequires:  python%{python3_pkgversion}-devel
+
+# BuildRequires for tests
+BuildRequires:  python-nose
+BuildRequires:  python%{python3_pkgversion}-nose
+BuildRequires:  python2-coverage
+BuildRequires:  python%{python3_pkgversion}-coverage
+BuildRequires:  python2-coveralls
+BuildRequires:  python%{python3_pkgversion}-coveralls
+BuildRequires:  python2-isort
+BuildRequires:  python%{python3_pkgversion}-isort
+BuildRequires:  python2-flake8
+BuildRequires:  python%{python3_pkgversion}-flake8
+
 
 %description
 netjsonconfig is a python library that converts NetJSON DeviceConfiguration
 objects into real router configurations that can be installed on systems like
 OpenWRT, LEDE or OpenWisp Firmware.
 
+
 %package -n python2-%{pypi_name}
 Summary:        %{summary}
 %{?python_provide:%python_provide python2-%{pypi_name}}
-Requires:  python2-nose
+Requires:       python-jinja2
+Requires:       python-jsonschema
+Requires:       python-six
 %description -n python2-%{pypi_name}
 netjsonconfig is a python library that converts NetJSON DeviceConfiguration
 objects into real router configurations that can be installed on systems like
 OpenWRT, LEDE or OpenWisp Firmware.
 
-%package -n python3-%{pypi_name}
+
+%package -n python%{python3_pkgversion}-%{pypi_name}
 Summary:        %{summary}
-%{?python_provide:%python_provide python3-%{pypi_name}}
-Requires:  python3-
-%description -n python3-%{pypi_name}
+%{?python_provide:%python_provide python%{python3_pkgversion}-%{pypi_name}}
+Requires:       python%{python3_pkgversion}-jinja2
+Requires:       python%{python3_pkgversion}-jsonschema
+Requires:       python%{python3_pkgversion}-six
+%description -n python%{python3_pkgversion}-%{pypi_name}
 netjsonconfig is a python library that converts NetJSON DeviceConfiguration
 objects into real router configurations that can be installed on systems like
 OpenWRT, LEDE or OpenWisp Firmware.
+
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
@@ -64,11 +80,11 @@ OpenWRT, LEDE or OpenWisp Firmware.
 %doc README.rst
 %{python2_sitelib}/*
 
-%files -n python3-%{pypi_name}
+%files -n python%{python3_pkgversion}-%{pypi_name}
 %license LICENSE
 %doc README.rst
 %{python3_sitelib}/*
 
 %changelog
-* Wed Aug 10 2016 Germano Massullo <germano.massullo@gmail.com> - 0.5.1-1
+* Tue Nov 1 2016 Germano Massullo <germano.massullo@gmail.com> - 0.5.1-1
 - First commit on Fedora's Git
