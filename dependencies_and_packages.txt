@@ -6,14 +6,7 @@ STATUS                  NAME                               RedHat Bugzilla id   
 Package approved        python-django-jsonfield            https://bugzilla.redhat.com/show_bug.cgi?id=1375222          python-django-netjsonconfig
 
                       
-Review in progress      python-django-netjsongraph         https://bugzilla.redhat.com/show_bug.cgi?id=1369213
-must unbundle js-d3
-library.It is an app
-but it is still not yet
-used by any software. d3
-unbundling requires an high
-effort, so I am still
-evaluating if I can do it
+Package approved        python-django-netjsongraph         https://bugzilla.redhat.com/show_bug.cgi?id=1369213
 To do                   python-django-netjsonconfig
 Package review in       python-netjsonconfig               https://bugzilla.redhat.com/show_bug.cgi?id=1391457        python-django-netjsonconfig
 progress
