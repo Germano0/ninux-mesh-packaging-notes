@@ -12,6 +12,8 @@ Package review in       python-netjsonconfig               https://bugzilla.redh
 progress
 To do                   nodeshot
 To do                   python-django-x509
+Spec file adjustment    python-django-sortedm2m
+in progress
 
 
 |======================|
@@ -19,7 +21,7 @@ To do                   python-django-x509
 |======================|
 
 AFFECTED PACKAGE'S NAME                      MISSING DEPENDENCIES
-python-django-netjsonconfig                  django-sortedm2m
+python-django-netjsonconfig                  (python-)django-sortedm2m
 
 
 [1]: http://ml.ninux.org/pipermail/ninux-dev/2016-September/000727.html
