@@ -8,8 +8,6 @@ Package approved        python-django-jsonfield            https://bugzilla.redh
                       
 Package approved        python-django-netjsongraph         https://bugzilla.redhat.com/show_bug.cgi?id=1369213
 To do                   python-django-netjsonconfig
-Package review in       python-netjsonconfig               https://bugzilla.redhat.com/show_bug.cgi?id=1391457        python-django-netjsonconfig
-progress
 To do                   nodeshot
 To do                   python-django-x509
 Spec file adjustment    python-django-sortedm2m
